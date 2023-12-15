@@ -96,25 +96,13 @@ paths:
                 Paging - more items found than it can fit on single page:
                   $ref: >-
                     #/components/examples/get-outputs-pagesize2-response-example
-        '400':
-          description: "Unsuccessful operation: indicates that the provided data is invalid."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/BadRequestResponse'
-        '403':
-          description: "Unsuccessful operation: indicates that the endpoint is not available for public use."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ForbiddenResponse'
-        '500':
-          description: "Unsuccessful operation: indicates that an unexpected, internal server error happened which prevented the node from fulfilling the request."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/InternalErrorResponse'
-
+        "400":
+          $ref: "./common.yaml#/components/responses/BadRequest"
+        "403":
+          $ref: "./common.yaml#/components/responses/Forbidden"
+        "500":
+          $ref: "./common.yaml#/components/responses/InternalError"
+  
   /api/indexer/v2/outputs/basic:
     get:
       tags:
@@ -256,24 +244,12 @@ paths:
                 Paging - more items found than it can fit on single page:
                   $ref: >-
                     #/components/examples/get-outputs-pagesize2-response-example
-        '400':
-          description: "Unsuccessful operation: indicates that the provided data is invalid."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/BadRequestResponse'
-        '403':
-          description: "Unsuccessful operation: indicates that the endpoint is not available for public use."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ForbiddenResponse'
-        '500':
-          description: "Unsuccessful operation: indicates that an unexpected, internal server error happened which prevented the node from fulfilling the request."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/InternalErrorResponse'
+        "400":
+          $ref: "./common.yaml#/components/responses/BadRequest"
+        "403":
+          $ref: "./common.yaml#/components/responses/Forbidden"
+        "500":
+          $ref: "./common.yaml#/components/responses/InternalError"
 
   /api/indexer/v2/outputs/account:
     get:
@@ -342,24 +318,12 @@ paths:
                 Paging - more items found than it can fit on single page:
                   $ref: >-
                     #/components/examples/get-outputs-pagesize2-response-example
-        '400':
-          description: "Unsuccessful operation: indicates that the provided data is invalid."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/BadRequestResponse'
-        '403':
-          description: "Unsuccessful operation: indicates that the endpoint is not available for public use."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ForbiddenResponse'
-        '500':
-          description: "Unsuccessful operation: indicates that an unexpected, internal server error happened which prevented the node from fulfilling the request."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/InternalErrorResponse'
+        "400":
+          $ref: "./common.yaml#/components/responses/BadRequest"
+        "403":
+          $ref: "./common.yaml#/components/responses/Forbidden"
+        "500":
+          $ref: "./common.yaml#/components/responses/InternalError"
 
   /api/indexer/v2/outputs/account/{accountId}:
     get:
@@ -386,30 +350,14 @@ paths:
                 Query results in single output:
                   $ref: >-
                     #/components/examples/get-outputs-response-single-example
-        '400':
-          description: "Unsuccessful operation: indicates that the provided data is invalid."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/BadRequestResponse'
-        '403':
-          description: "Unsuccessful operation: indicates that the endpoint is not available for public use."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ForbiddenResponse'
-        '404':
-          description: "Unsuccessful operation: indicates that the requested data was not found."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/NotFoundResponse'
-        '500':
-          description: "Unsuccessful operation: indicates that an unexpected, internal server error happened which prevented the node from fulfilling the request."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/InternalErrorResponse'
+        "400":
+          $ref: "./common.yaml#/components/responses/BadRequest"
+        "403":
+          $ref: "./common.yaml#/components/responses/Forbidden"
+        "404":
+          $ref: "./common.yaml#/components/responses/NotFound"
+        "500":
+          $ref: "./common.yaml#/components/responses/InternalError"
 
   /api/indexer/v2/outputs/anchor:
     get:
@@ -490,24 +438,12 @@ paths:
                 Paging - more items found than it can fit on single page:
                   $ref: >-
                     #/components/examples/get-outputs-pagesize2-response-example
-        '400':
-          description: "Unsuccessful operation: indicates that the provided data is invalid."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/BadRequestResponse'
-        '403':
-          description: "Unsuccessful operation: indicates that the endpoint is not available for public use."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ForbiddenResponse'
-        '500':
-          description: "Unsuccessful operation: indicates that an unexpected, internal server error happened which prevented the node from fulfilling the request."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/InternalErrorResponse'
+        "400":
+          $ref: "./common.yaml#/components/responses/BadRequest"
+        "403":
+          $ref: "./common.yaml#/components/responses/Forbidden"
+        "500":
+          $ref: "./common.yaml#/components/responses/InternalError"
 
   /api/indexer/v2/outputs/anchor/{anchorId}:
     get:
@@ -534,30 +470,14 @@ paths:
                 Query results in single output:
                   $ref: >-
                     #/components/examples/get-outputs-response-single-example
-        '400':
-          description: "Unsuccessful operation: indicates that the provided data is invalid."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/BadRequestResponse'
-        '403':
-          description: "Unsuccessful operation: indicates that the endpoint is not available for public use."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ForbiddenResponse'
-        '404':
-          description: "Unsuccessful operation: indicates that the requested data was not found."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/NotFoundResponse'
-        '500':
-          description: "Unsuccessful operation: indicates that an unexpected, internal server error happened which prevented the node from fulfilling the request."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/InternalErrorResponse'
+        "400":
+          $ref: "./common.yaml#/components/responses/BadRequest"
+        "403":
+          $ref: "./common.yaml#/components/responses/Forbidden"
+        "404":
+          $ref: "./common.yaml#/components/responses/NotFound"
+        "500":
+          $ref: "./common.yaml#/components/responses/InternalError"
 
   /api/indexer/v2/outputs/delegation:
     get:
@@ -620,25 +540,13 @@ paths:
                 Paging - more items found than it can fit on single page:
                   $ref: >-
                     #/components/examples/get-outputs-pagesize2-response-example
-        '400':
-          description: "Unsuccessful operation: indicates that the provided data is invalid."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/BadRequestResponse'
-        '403':
-          description: "Unsuccessful operation: indicates that the endpoint is not available for public use."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ForbiddenResponse'
-        '500':
-          description: "Unsuccessful operation: indicates that an unexpected, internal server error happened which prevented the node from fulfilling the request."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/InternalErrorResponse'
- 
+        "400":
+          $ref: "./common.yaml#/components/responses/BadRequest"
+        "403":
+          $ref: "./common.yaml#/components/responses/Forbidden"
+        "500":
+          $ref: "./common.yaml#/components/responses/InternalError"
+
   /api/indexer/v2/outputs/delegation/{delegationId}:
     get:
       tags:
@@ -664,30 +572,14 @@ paths:
                 Query results in single output:
                   $ref: >-
                     #/components/examples/get-outputs-response-single-example
-        '400':
-          description: "Unsuccessful operation: indicates that the provided data is invalid."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/BadRequestResponse'
-        '403':
-          description: "Unsuccessful operation: indicates that the endpoint is not available for public use."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ForbiddenResponse'
-        '404':
-          description: "Unsuccessful operation: indicates that the requested data was not found."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/NotFoundResponse'
-        '500':
-          description: "Unsuccessful operation: indicates that an unexpected, internal server error happened which prevented the node from fulfilling the request."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/InternalErrorResponse'
+        "400":
+          $ref: "./common.yaml#/components/responses/BadRequest"
+        "403":
+          $ref: "./common.yaml#/components/responses/Forbidden"
+        "404":
+          $ref: "./common.yaml#/components/responses/NotFound"
+        "500":
+          $ref: "./common.yaml#/components/responses/InternalError"
 
   /api/indexer/v2/outputs/foundry:
     get:
@@ -756,24 +648,12 @@ paths:
                 Paging - more items found than it can fit on single page:
                   $ref: >-
                     #/components/examples/get-outputs-pagesize2-response-example
-        '400':
-          description: "Unsuccessful operation: indicates that the provided data is invalid."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/BadRequestResponse'
-        '403':
-          description: "Unsuccessful operation: indicates that the endpoint is not available for public use."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ForbiddenResponse'
-        '500':
-          description: "Unsuccessful operation: indicates that an unexpected, internal server error happened which prevented the node from fulfilling the request."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/InternalErrorResponse'
+        "400":
+          $ref: "./common.yaml#/components/responses/BadRequest"
+        "403":
+          $ref: "./common.yaml#/components/responses/Forbidden"
+        "500":
+          $ref: "./common.yaml#/components/responses/InternalError"
 
   /api/indexer/v2/outputs/foundry/{foundryId}:
     get:
@@ -800,30 +680,14 @@ paths:
                 Query results in single output:
                   $ref: >-
                     #/components/examples/get-outputs-response-single-example
-        '400':
-          description: "Unsuccessful operation: indicates that the provided data is invalid."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/BadRequestResponse'
-        '403':
-          description: "Unsuccessful operation: indicates that the endpoint is not available for public use."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ForbiddenResponse'
-        '404':
-          description: "Unsuccessful operation: indicates that the requested data was not found."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/NotFoundResponse'
-        '500':
-          description: "Unsuccessful operation: indicates that an unexpected, internal server error happened which prevented the node from fulfilling the request."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/InternalErrorResponse'
+        "400":
+          $ref: "./common.yaml#/components/responses/BadRequest"
+        "403":
+          $ref: "./common.yaml#/components/responses/Forbidden"
+        "404":
+          $ref: "./common.yaml#/components/responses/NotFound"
+        "500":
+          $ref: "./common.yaml#/components/responses/InternalError"
 
   /api/indexer/v2/outputs/nft:
     get:
@@ -972,24 +836,12 @@ paths:
                 Paging - more items found than it can fit on single page:
                   $ref: >-
                     #/components/examples/get-outputs-pagesize2-response-example
-        '400':
-          description: "Unsuccessful operation: indicates that the provided data is invalid."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/BadRequestResponse'
-        '403':
-          description: "Unsuccessful operation: indicates that the endpoint is not available for public use."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ForbiddenResponse'
-        '500':
-          description: "Unsuccessful operation: indicates that an unexpected, internal server error happened which prevented the node from fulfilling the request."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/InternalErrorResponse'
+        "400":
+          $ref: "./common.yaml#/components/responses/BadRequest"
+        "403":
+          $ref: "./common.yaml#/components/responses/Forbidden"
+        "500":
+          $ref: "./common.yaml#/components/responses/InternalError"
 
   /api/indexer/v2/outputs/nft/{nftId}:
     get:
@@ -1016,30 +868,15 @@ paths:
                 Query results in single output:
                   $ref: >-
                     #/components/examples/get-outputs-response-single-example
-        '400':
-          description: "Unsuccessful operation: indicates that the provided data is invalid."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/BadRequestResponse'
-        '403':
-          description: "Unsuccessful operation: indicates that the endpoint is not available for public use."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ForbiddenResponse'
-        '404':
-          description: "Unsuccessful operation: indicates that the requested data was not found."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/NotFoundResponse'
-        '500':
-          description: "Unsuccessful operation: indicates that an unexpected, internal server error happened which prevented the node from fulfilling the request."
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/InternalErrorResponse'
+        "400":
+          $ref: "./common.yaml#/components/responses/BadRequest"
+        "403":
+          $ref: "./common.yaml#/components/responses/Forbidden"
+        "404":
+          $ref: "./common.yaml#/components/responses/NotFound"
+        "500":
+          $ref: "./common.yaml#/components/responses/InternalError"
+
 components:
   examples:
     get-outputs-response-three-example:
@@ -1071,69 +908,6 @@ components:
       value:
 
   schemas:
-    ErrorResponse:
-      description: The error format.
-      properties:
-        error:
-          type: object
-          properties:
-            code:
-              type: string
-              description: The application error code.
-            message:
-              type: string
-              description: The error reason.
-          required:
-            - code
-            - message
-      required:
-        - error
-
-    ForbiddenResponse:
-      description: Indicates that this endpoint is not available for public use.
-      allOf:
-        - $ref: '#/components/schemas/ErrorResponse'
-      example:
-        error:
-          code: 403
-          message: not available for public use
-
-    ServiceUnavailableResponse:
-      description: Indicates that the service is unavailable.
-      allOf:
-        - $ref: '#/components/schemas/ErrorResponse'
-      example:
-        error:
-          code: 503
-          message: service unavailable
-
-    BadRequestResponse:
-      description: Indicates that the request was bad.
-      allOf:
-        - $ref: '#/components/schemas/ErrorResponse'
-      example:
-        error:
-          code: 400
-          message: invalid data provided
-
-    NotFoundResponse:
-      description: Indicates that the data was not found.
-      allOf:
-        - $ref: '#/components/schemas/ErrorResponse'
-      example:
-        error:
-          code: 404
-          message: could not find data
-
-    InternalErrorResponse:
-      description: Indicates that the server encountered an unexpected condition, which prevented it from fulfilling the request by the client.
-      allOf:
-        - $ref: '#/components/schemas/ErrorResponse'
-      example:
-        error:
-          code: 500
-          message: internal server error
-
     OutputsResponse:
       description: Returns a list of Output IDs.
       properties:
@@ -1156,4 +930,3 @@ components:
         - committedSlot
         - pageSize
         - items
-
